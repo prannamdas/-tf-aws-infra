@@ -9,7 +9,7 @@ resource "aws_lb" "aws_lb_alpha" {
 
 resource "aws_lb_target_group" "aws_lb_target_group_alpha" {
   name     = "aws-lb-target-group-alpha"
-  port     = 8080
+  port     = "8080"
   protocol = "HTTP"
   vpc_id   = aws_vpc.aws_vpc_alpha.id
 }
