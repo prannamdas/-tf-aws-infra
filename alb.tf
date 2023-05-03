@@ -9,14 +9,14 @@ resource "aws_lb" "aws_lb_alpha" {
 
 resource "aws_lb_target_group" "aws_lb_target_group_alpha" {
   name     = "aws-lb-target-group-alpha"
-  port     = 80
+  port     = 8080
   protocol = "HTTP"
   vpc_id   = aws_vpc.aws_vpc_alpha.id
 }
 
 resource "aws_lb_listener" "aws_lb_listener_alpha" {
   load_balancer_arn = aws_lb.aws_lb_alpha.arn
-  port              = "80"
+  port              = "8080"
   protocol          = "HTTP"
 
   default_action {
